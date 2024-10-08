@@ -18,5 +18,5 @@ Create a `.env` file in the root directory of the project with the following env
    ```env
    PUSHOVER_USER=your_pushover_user_key
    PUSHOVER_APP_TOKEN=your_pushover_app_token
-   PUSHOVER_LOG_TOKEN=your_pushover_log_token # optional, can use same token as Zappy app if you prefer
+   PUSHOVER_LOG_TOKEN=your_pushover_log_token # optional, can use same as app token if you prefer
    ```
