@@ -1,5 +1,6 @@
+import os
 import requests
-from helpers.logger import logger
+from helpers.logger import setup_logger, logger
 from helpers.pushover import Pushover
 from state_machine import StateMachine
 
@@ -17,8 +18,12 @@ def main():
             logger.exception(ERROR_MSG)
             return None
 
+    # get reference to root folder for absolute path of project files
+    root = os.path.dirname(__file__)
+
+    setup_logger(root)
+    sm = StateMachine(root)
     p = Pushover()
-    sm = StateMachine()
 
     refreshed_ip = refresh_ip()
     if refreshed_ip:
