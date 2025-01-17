@@ -35,7 +35,7 @@ def main():
         else:
             notif_msg = f"Public IPv4 address is still {refreshed_ip}"
             logger.info(notif_msg)
-            p.send_notification(notif_msg, priority=-2, is_log=True)
+            p.send_notification(notif_msg, priority=-2)
     else:
         p.send_notification(ERROR_MSG, is_log=True)
 
